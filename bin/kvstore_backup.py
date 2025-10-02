@@ -86,7 +86,7 @@ class KVStoreBackup(smi.Script):
             event.data = "200 success code. KVStore backup has started"
             ew.write_event(event)   
         else:
-            event = Event()
+            event = smi.Event()
             event.data = f"KVstore backup failure status_code={res.status_code} text={res.text}"
             ew.write_event(event)
 
